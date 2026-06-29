@@ -770,8 +770,8 @@ void Player::drawMapPackView(Draw *canvas)
         }
 
         // strip extension
-        char displayName[64];
-        snprintf(displayName, 64, "%s", mapPackFiles[i]);
+        char displayName[256];
+        snprintf(displayName, sizeof(displayName), "%s", mapPackFiles[i]);
         char *dot = strrchr(displayName, '.');
         if (dot)
             *dot = '\0';
@@ -1932,7 +1932,7 @@ void Player::processInput()
             // Store selected map file then load user stats
             if (ghoulsGame && mapPackCount > 0)
             {
-                char fullPath[128];
+                char fullPath[320];
                 snprintf(fullPath, sizeof(fullPath), ASSETS_FOLDER "%s", mapPackFiles[mapPackSelectedIndex]);
                 ghoulsGame->setSelectedMapFile(fullPath);
             }
