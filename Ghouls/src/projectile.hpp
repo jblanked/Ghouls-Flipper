@@ -34,9 +34,4 @@ private:
     ProjectileType projectileType;
     uint8_t collisionCount;
     float speed;
-
-    void makeArrow(float height);  // create a 3D arrow sprite with the specified height
-    void makeBullet(float height); // create a 3D bullet sprite with the specified height
-    void makeRocket(float height); // create a 3D rocket sprite with the specified height
-    void makeShell(float height);  // create a 3D shell sprite with the specified height
 };
